@@ -1,0 +1,23 @@
+{
+  "name": "bridge-new",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "supervisor ./backend/bin/www"
+  },
+  "dependencies": {
+    "async": "^2.1.4",
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "ejs": "^2.5.5",
+    "express": "~4.14.0",
+    "file-exists": "^2.0.0",
+    "jade": "^1.11.0",
+    "morgan": "~1.7.0",
+    "mysql": "^2.12.0",
+    "mysql-utilities": "^1.0.8",
+    "nconf": "^0.8.4",
+    "serve-favicon": "~2.3.0"
+  }
+}

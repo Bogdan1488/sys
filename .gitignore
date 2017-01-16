@@ -1,0 +1,9 @@
+.idea
+*.iml
+out
+gen
+/plugin
+webpack.config.js
+/frontend
+node_modules
+jquery-3.1.1.min.js
