@@ -6,6 +6,7 @@ var mysqlUtilities = require('mysql-utilities');
 var mysqlConn  = function(dbname) {
     var pool  = mysql.createPool({
         connectionLimit: 10,
+        acquireTimeout: 5000,
         host: config.get("mysql:host"),
         user: config.get("mysql:user"),
         password: config.get("mysql:password"),
@@ -16,7 +17,6 @@ var mysqlConn  = function(dbname) {
         mysqlUtilities.upgrade(connection);
         mysqlUtilities.introspection(connection);
     });
-
 
     return pool;
 };

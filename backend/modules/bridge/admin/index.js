@@ -11,11 +11,18 @@ module.exports = function(req, res, next) {
 
 
     connection.insert('users', {
-      'site_id': 123,
-      'staff_id': 123345
+      'site_id': Math.floor(Math.random()*999999999),
+      'staff_id': 1
     }, function(err, recordId) {
-      res.json({insert:recordId});
+      connection.release();
+      if (err) return next(err);
+
+
+
+
+      res.json(recordId);
     });
+
 
   });
 
